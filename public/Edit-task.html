@@ -1,16 +1,36 @@
-<div class="bg-dark text-white p-3">
-    <h2>Edit Appointment</h2>
-    <dl>
-        <dt><input type="hidden" id="UpdateId" class="form-control"></dt>
-        <dt>Date</dt>
-        <dd><input type="date" id="UpdateDate" class="form-control"></dd>
-        <dt>Tittle</dt>
-        <dd><input type="text" id="UpdateTitle" class="form-control"></dd>
-        <dt>Description</dt>
-        <dd><input type="text" id="UpdateDescription" class="form-control"></dd>
-        <dt><input type="hidden" id="UpdateUserId"></dt>
-    </dl>
-    <div class="mt-4">
-        <button id="btnUpdateTask" class="btn btn-success">Update</button>
+<div class="container my-4">
+  <div class="card bg-dark text-light shadow-lg">
+    <div class="card-body">
+      <h2 class="card-title mb-4">Edit Appointment</h2>
+
+      <form>
+        <!-- Hidden Fields -->
+        <input type="hidden" id="UpdateId" class="form-control" />
+        <input type="hidden" id="UpdateUserId" />
+
+        <!-- Date -->
+        <div class="mb-3">
+          <label for="UpdateDate" class="form-label">Date</label>
+          <input type="date" id="UpdateDate" class="form-control" />
+        </div>
+
+        <!-- Title -->
+        <div class="mb-3">
+          <label for="UpdateTitle" class="form-label">Title</label>
+          <input type="text" id="UpdateTitle" class="form-control" placeholder="Enter appointment title" />
+        </div>
+
+        <!-- Description -->
+        <div class="mb-3">
+          <label for="UpdateDescription" class="form-label">Description</label>
+          <input type="text" id="UpdateDescription" class="form-control" placeholder="Enter appointment details" />
+        </div>
+
+        <!-- Update Button -->
+        <div class="text-end">
+          <button type="button" id="btnUpdateTask" class="btn btn-success px-4">Update</button>
+        </div>
+      </form>
     </div>
- </div>
+  </div>
+</div>

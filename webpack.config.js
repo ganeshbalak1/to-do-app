@@ -1,53 +1,31 @@
-'use strict'
-
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require("path");
 
 module.exports = {
-  mode: 'development',
-  entry: './src/js/main.js',
+  mode: "production",
+  entry: "./src/js/main.js",
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
+    clean: true,
   },
   devServer: {
-    static: path.resolve(__dirname, 'public'),
+    static: {
+      directory: path.resolve(__dirname, "public"),
+    },
     port: 8100,
-    hot: true
+    open: true,
+    hot: true,
   },
-  plugins: [
-    new HtmlWebpackPlugin({ template: './public/index.html' })
-  ],
   module: {
     rules: [
       {
-        test: /\.(scss)$/,
-        use: [
-          {
-            // Adds CSS to the DOM by injecting a `<style>` tag
-            loader: 'style-loader'
-          },
-          {
-            // Interprets `@import` and `url()` like `import/require()` and will resolve them
-            loader: 'css-loader'
-          },
-          {
-            // Loader for webpack to process CSS with PostCSS
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: [[
-                  'autoprefixer']
-                ]
-              }
-            }
-          },
-          {
-            // Loads a SASS/SCSS file and compiles it to CSS
-            loader: 'sass-loader'
-          }
-        ]
-      }
-    ]
-  }
-}
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: "asset/resource",
+      },
+    ],
+  },
+};

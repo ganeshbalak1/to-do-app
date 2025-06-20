@@ -1,16 +1,28 @@
-<div class="bg-dark text-white p-3">
-    <h2>New Appointment</h2>
-    <dl>
-        <dt>Id</dt>
-        <dd><input type="text" value="" id="TaskId" class="form-control"></dd>
-        <dt>Date</dt>
-        <dd><input type="date" id="TaskDate" class="form-control"></dd>
-        <dt>Tittle</dt>
-        <dd><input type="text" id="TaskTitle" class="form-control"></dd>
-        <dt>Description</dt>
-        <dd><input type="text" id="TaskDescription" class="form-control"></dd>
-    </dl>
-    <div class="mt-4">
-        <button id="btnCreateTask" class="btn btn-success">Create</button>
+<div class="container my-4">
+  <div class="card bg-dark text-light shadow-lg">
+    <div class="card-body">
+      <h2 class="card-title mb-4">New Appointment</h2>
+      <form id="newTaskForm">
+        <div class="mb-3">
+          <label for="TaskId" class="form-label">Appointment ID</label>
+          <input type="text" id="TaskId" class="form-control" placeholder="Enter ID" required>
+        </div>
+        <div class="mb-3">
+          <label for="TaskDate" class="form-label">Date</label>
+          <input type="date" id="TaskDate" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="TaskTitle" class="form-label">Title</label>
+          <input type="text" id="TaskTitle" class="form-control" placeholder="Enter title" required>
+        </div>
+        <div class="mb-3">
+          <label for="TaskDescription" class="form-label">Description</label>
+          <input type="text" id="TaskDescription" class="form-control" placeholder="Enter description" required>
+        </div>
+        <div class="text-end">
+          <button type="submit" id="btnCreateTask" class="btn btn-success px-4">Create</button>
+        </div>
+      </form>
     </div>
- </div>
+  </div>
+</div>
