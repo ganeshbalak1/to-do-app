@@ -21,13 +21,13 @@ A full-stack web application to manage appointments using:
 
 ## 🛠️ Tech Stack
 
-| Layer     | Technology        |
-|-----------|-------------------|
+| Layer     | Technology                          |
+|-----------|-------------------------------------|
 | Frontend  | HTML, SCSS, JS, Bootstrap 5, jQuery |
-| Backend   | Node.js, Express  |
-| Database  | MongoDB           |
-| Bundler   | Webpack           |
-| Hosting   | Render            |
+| Backend   | Node.js, Express                    |
+| Database  | MongoDB                             |
+| Bundler   | Webpack                             |
+| Hosting   | Render                              |
 
 ---
 
@@ -35,8 +35,8 @@ A full-stack web application to manage appointments using:
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/todo-web-app.git
-cd todo-web-app
+git clone https://github.com/ganeshbalak1/to-do-app.git
+cd to-do-app
 
 # 2. Install dependencies
 npm install
