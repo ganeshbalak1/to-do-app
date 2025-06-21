@@ -1,8 +1,7 @@
 {
   "name": "todo-web-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "server/todo-api.js",
+  "description": "A full-stack TODO web app",
   "scripts": {
     "start": "node server/todo-api.js",
     "dev": "webpack serve --mode development",
