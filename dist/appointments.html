@@ -1,0 +1,22 @@
+<div class="container my-4 p-4 shadow bg-white rounded" style="max-width: 700px;">
+  <!-- Top bar with welcome + signout -->
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h3 class="text-primary mb-0">
+      Welcome, <span id="UserIdContainer" class="text-capitalize"></span>
+    </h3>
+    <button id="btnSignout" class="btn btn-outline-danger btn-sm">Sign out</button>
+  </div>
+
+  <!-- Section heading + new appointment button -->
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h5 class="text-secondary mb-0">Your Appointments</h5>
+    <button id="btnNewTask" class="btn btn-warning btn-sm">
+      <i class="bi bi-plus-circle me-1"></i> New Appointment
+    </button>
+  </div>
+
+  <!-- Dynamic appointment cards injected here -->
+  <div id="appointmentsContainer" class="d-flex flex-column gap-3">
+    <!-- JS will inject appointment cards here -->
+  </div>
+</div>
