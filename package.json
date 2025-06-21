@@ -23,7 +23,8 @@
     "mongodb": "^6.3.0",
     "postcss": "^8.4.33",
     "webpack": "^5.99.9",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-sources": "^3.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.27.4",
