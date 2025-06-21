@@ -9,14 +9,6 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
-  devServer: {
-    static: {
-      directory: path.resolve(__dirname, "public"),
-    },
-    port: 8100,
-    open: true,
-    hot: true,
-  },
   module: {
     rules: [
       {
@@ -31,9 +23,7 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin({
-      patterns: [
-        { from: "public", to: "." }, // copy all files from public/ to dist/
-      ],
+      patterns: [{ from: "public", to: "." }],
     }),
   ],
 };
